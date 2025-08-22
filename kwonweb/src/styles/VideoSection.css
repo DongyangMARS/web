@@ -1,0 +1,73 @@
+.video-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.video-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  transition: font-size 0.3s ease;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.video-box {
+  width: 320px;
+  height: 180px;
+  background-color: #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.video-box:hover {
+  transform: scale(1.05);
+}
+
+.youtube {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* 태블릿 (768px 이하) */
+@media (max-width: 768px) {
+  .video-title {
+    font-size: 28px;
+  }
+
+  .video-box {
+    width: 280px;
+    height: 160px;
+  }
+}
+
+/* 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .video-title {
+    font-size: 24px;
+  }
+
+  .video-box {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* 비율 고정 */
+  }
+
+  .youtube {
+    width: 100%;
+    height: 100%;
+  }
+}

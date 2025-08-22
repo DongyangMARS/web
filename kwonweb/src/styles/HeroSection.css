@@ -1,0 +1,100 @@
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 20px;
+  transition: font-size 0.3s ease;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  color: #2d2d2d;
+  transition: font-size 0.3s ease;
+}
+
+.description {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  transition: font-size 0.3s ease;
+}
+
+.hero-btn {
+  background-color: #f9a826;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #e08d00;
+}
+
+.caption {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 10px;
+  transition: font-size 0.3s ease;
+}
+
+/* 태블릿 (768px 이하) */
+@media (max-width: 768px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .description,
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .hero-btn {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+
+  .caption {
+    font-size: 13px;
+  }
+}
+
+/* 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 80px 16px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle,
+  .description {
+    font-size: 11px;
+  }
+
+  .hero-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .caption {
+    font-size: 12px;
+  }
+}

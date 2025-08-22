@@ -1,0 +1,91 @@
+.team-section {
+  padding: 30px 20px;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.team-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.team-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.team-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.team-role {
+  max-width: 300px;
+  text-align: center;
+}
+
+.team-role-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.team-names {
+  font-size: 16px;
+  color: #777;
+}
+
+/* 태블릿 (768px 이하) */
+@media (max-width: 768px) {
+  .team-title {
+    font-size: 28px;
+  }
+
+  .team-role {
+    max-width: 250px;
+  }
+
+  .team-role-title {
+    font-size: 14px;
+  }
+
+  .team-names {
+    font-size: 15px;
+  }
+}
+
+/* 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .team-section {
+    padding: 30px 10px;
+  }
+
+  .team-title {
+    font-size: 24px;
+  }
+
+  .team-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .team-role {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .team-role-title {
+    font-size: 13px;
+  }
+
+  .team-names {
+    font-size: 14px;
+  }
+}
