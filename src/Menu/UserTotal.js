@@ -4,11 +4,19 @@ import "./DashBoard.css";
 import axios from "axios";
 
 const UserTotal = () => {
+<<<<<<< Updated upstream
   const [users, setUsers] = useState([]);
   const [searchTop, setSearchTop] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [openRow, setOpenRow] = useState(null);
   const itemsPerPage = 10;
+=======
+    const [showExtraTable, setShowExtraTable] = useState(false);
+    const [users, setUsers] = useState([]);
+    const [searchTop, setSearchTop] = useState("");
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 10;
+>>>>>>> Stashed changes
 
   useEffect(() => {
     axios
