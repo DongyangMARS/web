@@ -1,20 +1,124 @@
-.scroll-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  background-color: #4c72ff;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  font-size: 24px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s;
-  z-index: 999;
+.news-section {
+  padding: 80px 20px;
+  background-color: var(--light-bg); /* 변경 */
+  text-align: center;
 }
 
-.scroll-to-top:hover {
-  background-color: #3a5be0;
+.news-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--text-base); /* 적용 */
+  margin-bottom: 40px;
+}
+
+.news-group {
+  margin-bottom: 40px;
+}
+
+.news-month {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-base); /* 변경 */
+  margin-bottom: 20px;
+}
+
+.news-list {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+  list-style: none;
+  padding: 0;
+}
+
+.news-item {
+  background: var(--bg-base); /* 변경 */
+  padding: 20px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.news-item:hover {
+  transform: translateY(-3px);
+}
+
+.news-date {
+  font-weight: bold;
+  color: var(--brown); /* 변경 */
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.news-version {
+  margin-left: 8px;
+  font-size: 14px;
+  color: var(--brown); /* 변경 */
+}
+
+.news-content {
+  font-size: 16px;
+  color: var(--text-base); /* 변경 */
+  margin-top: 4px;
+}
+
+/* 태블릿 (768px 이하) */
+@media (max-width: 768px) {
+  .news-title {
+    font-size: 28px;
+  }
+
+  .news-month {
+    font-size: 20px;
+  }
+
+  .news-item {
+    padding: 16px;
+  }
+
+  .news-date {
+    font-size: 15px;
+  }
+
+  .news-version {
+    font-size: 13px;
+  }
+
+  .news-content {
+    font-size: 15px;
+  }
+}
+
+/* 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .news-section {
+    padding: 60px 15px;
+  }
+
+  .news-title {
+    font-size: 24px;
+  }
+
+  .news-month {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .news-item {
+    padding: 14px;
+    border-radius: 8px;
+  }
+
+  .news-date {
+    font-size: 14px;
+  }
+
+  .news-version {
+    font-size: 12px;
+  }
+
+  .news-content {
+    font-size: 14px;
+    margin-top: 3px;
+  }
 }

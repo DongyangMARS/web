@@ -1,5 +1,5 @@
 import '../styles/VideoSection.css';
-
+import '../styles/color.css';
 function VideoSection() {
   return (
     <section className="video-section" id="video">
