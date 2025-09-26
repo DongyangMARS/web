@@ -30,6 +30,13 @@
   justify-content: center;
   transition: transform 0.3s ease;
   cursor: pointer;
+  position: relative;
+}
+.video-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .video-box:hover {
