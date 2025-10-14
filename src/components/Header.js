@@ -11,7 +11,6 @@ function Header() {
   return (
     <header className="header"> 
       <a className="logo" href="#">
-        <img src={logo} alt="로고" />
         <span className="logo-text" data-short="MS">MindSpace</span>
       </a>
 

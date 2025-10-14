@@ -120,7 +120,7 @@ const DashBoard = () => {
       </nav>
 
       <main className="main-content">
-        <section className="top1">
+          <section className="dashboard-cards-container">
           <div className="card dashboard-card1">
             <div className="card-header">
               <div className="card-title">방문자 현황</div>
@@ -137,9 +137,6 @@ const DashBoard = () => {
               <DailySummary />
             </div>
           </div>
-        </section>
-        
-        <section className="top2">
           <div className="card dashboard-card3">
             <div className="card-header">
               <div className="card-title">FAQ</div>
@@ -210,7 +207,7 @@ const DashBoard = () => {
               )}
             </div>
           </div>
-        </section>
+                  </section>
       </main>
     </div>
   );
