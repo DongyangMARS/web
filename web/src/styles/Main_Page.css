@@ -1,0 +1,8 @@
+.main-page {
+  padding-top: 60px; /* 헤더 높이에 맞게 조절! */
+  background-color: var(--bg-base);
+}
+
+html {
+  scroll-behavior: smooth;
+}
