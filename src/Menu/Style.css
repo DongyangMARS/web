@@ -1,0 +1,98 @@
+.edit-btn {
+  background-color: var(--brown);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: var(--light-olive); /* var(--brown)보다 약간 밝은 색 */
+}
+
+.edit-btn1 {
+  background-color: var(--brown);
+  color: white;
+  border: none;
+  padding: 3.5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn1:hover {
+  background-color: var(--light-olive); /* var(--brown)보다 약간 밝은 색 */
+}
+
+.reset-btn {
+  background-color: var(--heavy-brown);
+  color: var(--light-bg);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+  background-color: var(--heavy-olive);
+  color: var(--bg-base);
+}
+
+.delete-btn {
+  background-color: darkred;
+  color: var(--bg-base);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.1s ease;
+}
+
+.delete-btn:hover {
+  background-color: var(--heavy-olive);
+}
+
+.title-textarea {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid var(--light-olive);
+  border-radius: 4px;
+  background-color: var(--bg-base);
+  font-size: 14px;
+  color: var(--text-base);
+  box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
+  resize: none; /* textarea의 크기 조절 막기 */
+  margin-top: 5px; /* 제목/내용 라벨과의 간격 */
+}
+
+.main-textarea {
+  color: var(--light-bg);
+  width: 90%;
+  padding: 10px;
+  border: 0px;
+  border: 1px solid var(--light-olive);
+  border-radius: 4px;
+  background-color: var(--bg-base);
+  font-size: 14px;
+  color: var(--text-base);
+  box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
+  resize: none; /* textarea의 크기 조절 막기 */
+  margin-top: 5px; /* 제목/내용 라벨과의 간격 */
+}
+.center-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.horizontal-center {
+  display: flex;
+  justify-content: center;
+}

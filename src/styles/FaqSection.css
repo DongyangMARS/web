@@ -1,0 +1,108 @@
+.faq-section {
+  padding: 40px 20px;
+  background-color: var(--bg-base); /* 적용 */
+  text-align: center;
+}
+
+.faq-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  transition: font-size 0.3s ease;
+}
+
+.faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--light-bg); /* 적용 */
+  padding: 16px 0;
+}
+
+.faq-question {
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-base); /* 적용 */
+}
+
+.faq-answer-wrapper {
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  max-height: 0;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  font-size: 16px;
+  color: var(--text-base); /* 적용 */
+  padding-right: 5px;
+}
+
+.faq-contact {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.faq-button {
+  padding: 12px 24px;
+  background-color: var(--brown); /* 적용 */
+  color: var(--bg-base); /* 변경 */
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-button:hover {
+  background-color: var(--olive); /* 적용 */
+  color: var(--light-bg); /* 변경 */
+}
+
+
+/* 태블릿 (768px 이하) */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 28px;
+  }
+
+  .faq-question {
+    font-size: 14px;
+  }
+
+  .faq-answer {
+    font-size: 15px;
+  }
+
+  .faq-button {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+}
+
+/* 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .faq-title {
+    font-size: 24px;
+  }
+
+  .faq-question {
+    font-size: 13.5px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+  }
+
+  .faq-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

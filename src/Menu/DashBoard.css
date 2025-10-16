@@ -1,0 +1,645 @@
+@import '../styles/color.css';
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+.DashLogo {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px;
+  text-align: center;
+}
+
+a:visited {
+  color: black;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100%;
+  background: #f5f5f5;
+  width: 100%;
+}
+
+.sidebar {
+  width: 180px;
+  background-color: var(--heavy-brown);
+  color: var(--bg-base);
+  min-height: 100vh;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 12px 30px;
+  color: var(--bg-base);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.sidebar ul li a.active {
+  background-color: var(--olive);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar ul li a:hover {
+  background-color: var(--brown);
+  color: var(--light-bg);
+}
+
+.daily-summary h2 {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.logo-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-btn .logo-img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.main-content {
+  flex: 1;
+  background: var(--light-bg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- 반응형 레이아웃을 위한 컨테이너 --- */
+.dashboard-cards-container {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1400px) {
+  .dashboard-cards-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1399px) {
+  .dashboard-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .dashboard-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- 기존 카드 및 요소 스타일 --- */
+.card {
+  background: var(--bg-base);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 233px;
+}
+
+.dashboard-card1,
+.dashboard-card2,
+.dashboard-card3,
+.dashboard-card4 {
+  min-height: 380px;
+  max-height: 400px;
+  overflow: visible; /* 잘림 현상 방지 */
+  max-height: none; /* 필요한 경우, 높이 제한도 제거 */
+  width: auto;
+  box-sizing: border-box;
+  margin: 5px;
+}
+
+.userlist-card {
+  max-width: 100%;
+  min-width: 800px;
+}
+
+.newlist-card {
+  max-width: 85%;
+}
+
+.post-card {
+  max-width: 430px;
+}
+
+.postb-card {
+  max-width: 875px;
+}
+
+.stat-card {
+  max-width: 875px;
+}
+
+.statb-card {
+  max-width: 420px;
+}
+
+.askcard {
+  max-width: 85%;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faqbox {
+  width: 885px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.noticebox {
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.userList-card {
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 219px;
+}
+
+.new-card .total-card {
+  width: 820px;
+  align-items: flex-start;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.user-top {
+  display: flex;
+  gap: 32px;
+  flex: 83% 15%;
+  margin: 0 auto;
+  max-width: 885px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.user-top .card:last-child {
+  flex: 0 165px;
+}
+
+.empty {
+  width: 132px;
+  padding: 20px;
+  background-color: transparent;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.post-card1,
+.post-card2 {
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 435px;
+  max-height: 350px;
+  overflow: hidden;
+}
+
+.post-card3 {
+  max-width: 885px;
+}
+
+.sub {
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.card-title-summary {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.ask-title {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.newUser {
+  width: 740px;
+  gap: 20px;
+}
+
+.user-list {
+  margin-top: 14px;
+}
+
+.more {
+  font-size: 0.8rem;
+  color: var(--text-base);
+  cursor: pointer;
+}
+
+.graph {
+  height: 150px;
+  border-radius: 4px;
+  margin-top: 16px;
+}
+
+.profile-card {
+  min-width: 100px;
+  max-width: 120px;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--brown);
+  height: 270px;
+  border-radius: 8px;
+  margin: 20px auto 0 auto;
+  
+}
+.profile-image{
+  background-color: var(--light-brown);
+}
+
+.profile-bundle {
+  width: 80px;
+  height: 80px;
+  color: var(--light-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+
+.profile-info p {
+  margin: 5px 0 0 0;
+  font-weight: bold;
+}
+
+.profile-info span {
+  font-size: 0.7rem;
+  color: var(--light-bg);
+}
+
+.list-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.list-table th,
+.list-table td {
+  border: 2px solid #ddd;
+  border-left: none;
+  border-right: none;
+  padding: 8px;
+  text-align: center;
+}
+
+.list-table th {
+  border-bottom: 2px solid #000000;
+  border-top: none;
+}
+
+.faqItem {
+  margin-bottom: 10px;
+}
+
+.faq-question,
+.notice-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 2px;
+  margin-top: 16px;
+}
+
+.faq-answer {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 5px;
+}
+
+.notice-content {
+  font-size: 12px;
+  color: gray;
+}
+
+.search-input {
+  width: 360px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.inquiry-content {
+  background: #fefefe;
+  margin-top: 10px;
+  min-height: 120px;
+}
+
+.divider {
+  margin: 17px 0;
+}
+
+.send {
+  font-size: 0.9rem;
+  color: var(--heavy-olive);
+  margin-top: 9px;
+}
+
+.ask-date {
+  font-size: 0.8rem;
+  color: #616161;
+}
+
+.answer-section {
+  display: flex;
+  gap: 10px;
+}
+
+.profile-image {
+  min-width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.answer-box {
+  flex-grow: 1;
+}
+
+.answer-box textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  background: #f0f0f0;
+  border: none;
+  resize: none;
+}
+
+.button-wrapper {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.button-wrapper button {
+  padding: 6px 12px;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.button-wrapper button:hover {
+  background: #555;
+}
+
+.listTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  table-layout: fixed;
+}
+
+.listTable th,
+.listTable td {
+  border: 2px solid #ddd;
+  border-left: none;
+  border-right: none;
+  padding: 8px;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.listTable th {
+  border-bottom: 2px solid #000000;
+  border-top: none;
+}
+
+.settingCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-wrap {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.edit {
+  font-size: 14px;
+  color: #888;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.id {
+  margin-top: 3px;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.chart-labels {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: black;
+  min-height: 150px;
+  text-align: center;
+}
+
+.measurement-panel {
+  background: #f8fafc;
+  border-top: 1px solid #e5e7eb;
+  padding: 8px 12px 12px;
+  max-width: 80%;
+  overflow-x: auto;
+}
+
+.measurement-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.measurement-table th,
+.measurement-table td {
+  border: 1px solid #e5e7eb;
+  padding: 6px 8px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.measurement-rowhdr {
+  background: #eef2f7;
+  width: 110px;
+  white-space: nowrap;
+}
+
+.measurement-cell {
+  min-width: 90px;
+}
+
+.measurement-cell.major-cell {
+  background-color: #1D3162;
+  color: white;
+  font-weight: bold;
+}
+
+.measurement-cell.minor-cell {
+  background-color: #749dff;
+  color: white;
+}
+
+.daily-summary {
+  margin-bottom: 10px;
+  height: 280px;
+  overflow-y: auto;
+}
+
+.logo-btn .logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.summary-table th,
+.summary-table td {
+  border: 2px solid #ddd;
+  border-left: none;
+  border-right: none;
+  padding: 8px;
+  text-align: center;
+}
+
+.summary-table th {
+  border-bottom: 2px solid #000000;
+  border-top: none;
+  font-size: 14px;
+}
+
+.summary-sum {
+  border-bottom: 2px solid #000000;
+  border-top: none;
+  font-size: 14px;
+}
+.edit-btn {
+  background-color: var(--brown);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: var(--light-olive); /* var(--brown)보다 약간 밝은 색 */
+}
+
+.reset-btn {
+  background-color: var(--heavy-brown);
+  color: var(--light-bg);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+  background-color: var(--heavy-olive);
+  color: var(--bg-base);
+}
+
+.delete-btn {
+  background-color: darkred;
+  color: var(--bg-base);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.1s ease;
+}
+
+.delete-btn:hover {
+  background-color: var(--heavy-olive);
+}
