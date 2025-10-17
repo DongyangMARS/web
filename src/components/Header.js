@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../assets/EmotionVR.png';
+import logo from '../assets/MindSpaceLogo.png';
 import '../styles/Header.css';
 import '../styles/color.css';
 

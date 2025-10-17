@@ -1,13 +1,23 @@
 :root {
-  --bg-base: #F8F5F2;       /* 기본 배경 */
-  --text-base: #1F1F1F;     /* 기본 텍스트 */
-  --brown: #A67B5B;         /* 메인 포인트 브라운 */
-  --olive: #708238;         /* 메인 포인트 올리브 */
-  
-  --light-brown: #D7BFA6;   /* 부드러운 연브라운 */
-  --light-olive: #A9B885;   /* 은은한 연올리브 */
-  --heavy-olive: #4A5A1F;   /* 진한 올리브 */
-  --heavy-brown: #704C2E;   /* 진한 브라운 */
-  
-  --light-bg: #F5EFE6;      /* 살짝 톤다운된 배경 */
+  /* 기본 색상 (흰색 대신 아주 밝은 푸른색) */
+  --bg-base: #F8FAFC;       /* 기본/카드 배경과 유사하게 설정 */
+  --text-base: #212529;
+  --light-bg: #DEE2E6;
+
+  /* 포인트 색상 */
+  --brown: var(--color-accent);
+  --olive: var(--sidebar-hover);
+  --color-accent: #1C74AD;
+
+  /* 대시보드 테마 색상 */
+  --sidebar-base: #325D9B;
+  --sidebar-hover:#1A2F50 ;
+  --dashboard-bg: #000000;       /* 전체 배경 (메인 톤) */
+  --main-content-bg: #EBEFF2;    /* 메인 콘텐츠 영역 배경 */
+
+  /* 카드 및 구분선 */
+  --card-bg: #F8FAFC;              /* ⭐️ 순수 흰색 대신 밝은 푸른색으로 변경 */
+  --shadow-color: rgba(0, 0, 0, 0.08); /* 그림자 연하게 */
+  --border-light: #C5C9CD;
+  --text-secondary: #6C757D;
 }
