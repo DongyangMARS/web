@@ -35,11 +35,7 @@ const defaultFaqs = [
 ];
  
 const FAQ = () => {
-    const [users, setUsers] = useState([]);
     const [editTitle, setEditTitle] = useState("");
-    const [newUsers, setNewUsers] = useState([]);
-    const [searchTop, setSearchTop] = useState("");
-    const [searchBottom, setSearchBottom] = useState("");
     const [openRow, setOpenRow] = useState(null);
     const [editContent, setEditContent] = useState("");
 
@@ -117,32 +113,11 @@ const FAQ = () => {
         axios.get("http://localhost:5001/api/users")
             .then((res) => {
                 console.log("회원정보 불러오기 성공:", res.data);
-                const allUsers = res.data.users || [];
-                setUsers(allUsers);
-
-                const oneWeekAgo = new Date();
-                oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
-
-                const recentUsers = allUsers.filter(user => {
-                    if (!user.createdAt) return false;
-                    const createdDate = new Date(user.createdAt);
-                    return createdDate >= oneWeekAgo;
-                });
-
-                setNewUsers(recentUsers);
             })
             .catch((err) => {
                 console.error("회원정보 불러오기 실패:", err);
             });
     }, []);
-
-    const filteredTopUsers = users.filter((user) =>
-        user.name?.toLowerCase().includes(searchTop.toLowerCase())
-    );
-
-    const filteredBottomUsers = users.filter((user) =>
-        user.name?.toLowerCase().includes(searchBottom.toLowerCase())
-    );
 
     return (
         <div className="dashboard-container">

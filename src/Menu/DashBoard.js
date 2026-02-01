@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Visitor from "./Visitor";
-import FAQ from "./FAQ";
-import Notice from "./Notice";
 import { NavLink } from "react-router-dom";
 import "./DashBoard.css";
 import DailySummary from "../Menu/DailySummary";
-import mindspaceImage from './dmu.jpg';
-import { loadFaqs, loadNotices, loadNews, saveNews } from "./DashBoard_Utility";
+import { loadFaqs } from "./DashBoard_Utility";
 import { newsUpdates } from "./newsinfo.js";
 import UserSpotlight from "./UserSpotlight";
 
+/* 사용하지 않는 함수들
 function flattenNewsUpdates(updates) {
   let id = 1;
   const flat = [];
@@ -39,33 +37,17 @@ function mergeSeedWithExisting(existing, seed) {
   const merged = [...missing, ...existing].sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
   return merged;
 }
+*/
 
 const DashBoard = () => {
   const [newUsers, setNewUsers] = useState([]);
   const [faqData, setFaqData] = useState([]);
-  const [noticeData, setNoticeData] = useState([]);
-  const [newsData, setNewsData] = useState([]);
 
-   // 기본 테스트 유저 데이터 추가
-  const defaultTestUser = {
-    email: "test04@test.com"
-  };
-  
   useEffect(() => {
     setFaqData(loadFaqs());
-    setNoticeData(loadNotices());
-    const existingNews = loadNews();
-    const seed = flattenNewsUpdates(newsUpdates);
-    const merged = mergeSeedWithExisting(existingNews, seed);
-    setNewsData(merged);
-    if (JSON.stringify(existingNews || []) !== JSON.stringify(merged)) {
-      saveNews(merged);
-    }
 
     const onStorage = (e) => {
       if (e.key === "faqData") setFaqData(loadFaqs());
-      if (e.key === "noticeData") setNoticeData(loadNotices());
-      if (e.key === "newsData") setNewsData(loadNews());
     };
     window.addEventListener("storage", onStorage);
     return () => window.removeEventListener("storage", onStorage);
@@ -117,7 +99,7 @@ const DashBoard = () => {
 
         <div className="card profile-card">
           <div className="profile-image">
-            <img src="https://www.dongyang.ac.kr/sites/dmu/images/sub/char2-1.png"/>
+            <img src="https://www.dongyang.ac.kr/sites/dmu/images/sub/char2-1.png" alt="프로필 이미지"/>
           </div>
           <div className="profile-info">
             <p>MARS</p>
